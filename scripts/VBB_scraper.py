@@ -13,10 +13,10 @@ URL = 'http://demo.hafas.de/bin/pub/vbb-fahrinfo/relaunch2011/extxml.exe/'
 
 session = requests.Session()
 
-with open('stations.txt', 'r') as f:
+with open('u2_and_u8_stations.txt', 'r') as f:
     station_names = f.readlines()
 
-outfile = codecs.open('station_ids.csv', 'w', encoding='utf-8')
+outfile = codecs.open('u2_and_u8_station_ids.csv', 'w', encoding='utf-8')
 
 for station_name in station_names:
     query = template.replace('wibble', station_name.strip())
