@@ -1,0 +1,313 @@
+Adenauerplatz
+Adlershof
+Afrikanische Strasse
+Ahrensfelde
+Alexanderplatz
+Alt-Mariendorf
+Alt-Reinickendorf
+Alt-Tegel
+Alt Tempelhof
+Altglienicke
+Altstadt Spandau
+Amrumer Strasse
+Anhalter Bahnhof
+Attilastrasse
+Augsburger Strasse
+Babelsberg
+Baumschulenweg
+Bayerischer Platz
+Bellevue
+Bergfelde
+Berlin Hauptbahnhof
+Berliner Strasse
+Bernau bei Berlin
+Bernau-Friedenstal
+Bernauer Strasse
+Betriebsbahnhof Rummelsburg
+Betriebsbahnhof Schoneweide
+Beusselstrasse
+Biesdorf
+Biesdorf-Sud
+Birkenstein
+Birkenstrasse
+Birkenwerder
+Bismarckstrasse
+Blankenburg
+Blankenfelde
+Blaschkoallee
+Blissestrasse
+Boddinstrasse
+Borgsdorf
+Bornholmer Strasse
+Borsigwerke
+Botanischer Garten
+Brandenburger Tor
+Breitenbachplatz
+Britz-Sud
+Buch
+Buckower Chaussee
+Bundesplatz
+Bundestag
+Butlowstrasse
+Charlottenburg
+Cottbusser Platz
+Dahlem-Dorf
+Deutsche Oper
+Eberswalder Strasse
+Eichborndamm
+Eichwalde
+Eisenacher Strasse
+Elsterwerdaer Platz
+Erkner
+Ernst-Reuter-Platz
+Fehrbelliner Platz
+Feuerbachstrasse
+Flughafen Schonefeld
+Frankfurter Allee
+Frankfurter Tor
+Franz-Neumann-Platz
+Franzosische Strasse
+Fredersdorf
+Friedenau
+Friedrich-Willhelm-Platz
+Friedrichsfelde
+Friedrichsfelde Ost
+Friedrichshagen
+Friedrichstrasse
+Frohnau
+Gehrenseestrasse
+Gesundbrunnen
+Gleisdreieck
+Gneisenaustrasse
+Gorlitzer Bahnhof
+Greifswalder Strasse
+Grenzallee
+Griebnitzsee
+Grunau
+Grunbergallee
+Grunewald
+Guntzelstrasse
+Hackescher Markt
+Halemweg
+Halensee
+Hallesches Tor
+Hansaplatz
+Haselhorst
+Hausvogteiplatz
+Heerstrasse
+Hegermuhle
+Heidelberger Platz
+Heiligensee
+Heinrich-Heine-Strasse
+Hellersdorf
+Hennigsdorf
+Hermannplatz
+Hermannstrasse
+Hermsdorf
+Hirschgarten
+Hohen Neuendorf
+Hohenschonhausen
+Hohenzollerndamm
+Hohenzollernplatz
+Holzhauser Strasse
+Honow
+Hoppegarten
+Humboldthain
+Innsbrucker Platz
+Jakob-Kaiser-Platz
+Jannowitzbrucke
+Johannisthaller Chaussee
+Julius-Leber-Brucke
+Jungfernheide
+Kaiserdamm
+Kaiserin-Augusta-Strasse
+Karl-Bonhoeffer-Nervenklinik
+Karl-Marx-Strasse
+Karlshorst
+Karow
+Kaulsdorf
+Kaulsdorf Nord
+Kleiestpark
+Klosterstrasse
+Kochstrasse
+Kollnische Heide
+Konigs Wusterhausen
+Konstanzer Strasse
+Kopenick
+Kottbusser Tor
+Krumme Lanke
+Kufurstendamm
+Kurfurstendamm
+Kurfurstenstrasse
+Kurt-Schumacher-Platz
+Landsberger Allee
+Lankwitz
+Lehnitz
+Leinestrasse
+Leopoldplatz
+Lichtenberg
+Lichtenrade
+Lichterfelde Ost
+Lichterfelde Sud
+Lichterfelde West
+Lindauer Allee
+Lipschitzallee
+Louis-Lewin-Strasse
+Magdalenenstrasse
+Mahlow
+Mahlsdorf
+Marienfelde
+Markisches Museum
+Marzahn
+Mehringdamm
+Mehrower Allee
+Mendelssohn-Bartholdy-Park
+Messe Nord / ICC
+Messe Nord/ICC
+Messe Sud
+Mexikoplatz
+Mierendorffplatz
+Mockernbrucke
+Mohrenstrasse
+Moritzplatz
+Muhlenbeck-Monchmuhle
+Naturkundemuseum
+Nauener Platz
+Neu-Westend
+Neue Grottkauer Strasse
+Neuenhagen
+Neukolln
+Nikolassee
+Noldnerplatz
+Nollendorfplatz
+Nordbahnhof
+Oberspree
+Olympia-Stadion
+Olympiastadion
+Onkel Toms Hutte
+Oranienburg
+Oranienburger Strasse
+Oranienburger Tor
+Osdorfer Strasse
+Oskar-Helene-Heim
+Osloer Strasse
+Ostbahnhof
+Ostkreuz
+Otisstrasse
+Pankow
+Pankow-Heinersdorf
+Pankstrasse
+Paracelsus-Bad
+Paradestrasse
+Parchimer Allee
+Paulsternstrasse
+Petershagen Nord
+Pichelsberg
+Planterwald
+Platz der Luftbrucke
+Podbielskiallee
+Poelchaustrasse
+Potsdam Hauptbahnhof
+Potsdamer Platz
+Prenzlauer Allee
+Priesterweg
+Prinzenstrasse
+Rahnsdorf
+Raoul-Wallenberg-Strasse
+Rathaus Neukolln
+Rathaus Reinickendorf
+Rathaus Schoneberg
+Rathaus Spandau
+Rathaus Steglitz
+Rehberge
+Reinickendorfer Strasse
+Residenzstrasse
+Richard-Wagner-Platz
+Rohrdamm
+Rontgental
+Rosa-Luxemburg-Platz
+Rosenthaler Platz
+Rudesheimer Platz
+Rudow
+Ruhleben
+Rummelsburg
+Samariterstrasse
+Savignyplatz
+Schamweberstrasse
+Schichauweg
+Schillingstrasse
+Schlachtensee
+Schlesisches Tor
+Schlossstrasse
+Schoneberg
+Schoneweide
+Schonfliess
+Schonhauser Allee
+Schonholz
+Schonleinstrasse
+Schulzendorf
+Schwartskopffstrasse
+Seestrasse
+Senefelderplatz
+Siemensdamm
+Sonnenallee
+Sophie-Charlotte-Platz
+Spandau
+Spichernstrasse
+Spindlersfeld
+Spittelmarkt
+Springpfuhl
+Stadtmitte
+Storkower Strasse
+Strausberg
+Strausberg Nord
+Strausberg Stadt
+Strausberger Platz
+Stresow
+Sudende
+Sudkreuz
+Sudstern
+Sundgauer Strasse
+Tegel
+Teltow Stadt
+Tempelhof
+Theodor-Heuss-Platz
+Thielplatz
+Tiergarten
+Tierpark
+Treptower Park
+Turmstrasse
+Uhlandstrasse
+Ullsteinstrasse
+Viktoria-Luise-Platz
+Vinetastrasse
+Voltastrasse
+Waidmannslust
+Walther-Schreiber-Platz
+Wannsee
+Warschauer Strasse
+Wartenberg
+Weberwiese
+Wedding
+Weinmeisterstrasse
+Westend
+Westhafen
+Westkreuz
+Westphalweg
+Wildau
+Wilhelmshagen
+Wilhelmsruh
+Wilmersdorfer Strasse
+Wittenau
+Wittenbergplatz
+Wollankstrasse
+Wuhletal
+Wuhlheide
+Wutzkyallee
+Yorckstrasse
+Zehlendorf
+Zepernick
+Zeuthen
+Zitadelle
+Zoologischer Garten
+Zwickauer Damm
