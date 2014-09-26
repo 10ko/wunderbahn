@@ -80,9 +80,21 @@
     </content>
     <orderEntry type="jdk" jdkName="Android API 20 Platform" jdkType="Android SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" exported="" name="appcompat-v7-20.0.0" level="project" />
-    <orderEntry type="library" exported="" name="support-annotations-20.0.0" level="project" />
+    <orderEntry type="library" exported="" name="gson-2.2.4" level="project" />
+    <orderEntry type="library" exported="" name="okhttp-1.6.0" level="project" />
+    <orderEntry type="library" exported="" name="dagger-1.2.2" level="project" />
+    <orderEntry type="library" exported="" name="rxjava-core-0.20.0-RC5" level="project" />
     <orderEntry type="library" exported="" name="support-v4-20.0.0" level="project" />
+    <orderEntry type="library" exported="" name="rxjava-android-0.20.0-RC5" level="project" />
+    <orderEntry type="library" exported="" name="slf4j-api-1.7.5" level="project" />
+    <orderEntry type="library" exported="" name="retrofit-1.6.1" level="project" />
+    <orderEntry type="library" exported="" name="pubnub-3.6.3" level="project" />
+    <orderEntry type="library" exported="" name="appcompat-v7-20.0.0" level="project" />
+    <orderEntry type="library" exported="" name="javax.inject-1" level="project" />
+    <orderEntry type="library" exported="" name="android-sdk-0.0.1" level="project" />
+    <orderEntry type="library" exported="" name="okhttp-urlconnection-1.6.0" level="project" />
+    <orderEntry type="library" exported="" name="bcprov-jdk16-1.46" level="project" />
+    <orderEntry type="library" exported="" name="support-annotations-20.0.0" level="project" />
   </component>
 </module>
 

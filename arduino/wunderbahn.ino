@@ -1,3 +1,6 @@
+#include <SoftwareSerial.h>
+#include <WunderbarBridge.h>
+
 struct CharliePin {
     byte high;
     byte low;
@@ -57,6 +60,9 @@ private:
 
 
 #define DELAY 30
+#define DEBUG_RX 10
+#define DEBUG_TX 11
+
 //define pins in the order you want to adress them
 byte pins[] = {2, 3, 4, 5};
 const byte NUMBER_OF_PINS = sizeof(pins) / sizeof(byte);
@@ -80,7 +86,13 @@ charliePin leds[] = {
 
 const int num_leds = sizeof(leds) / sizeof(charliePin);
 
+Bridge bridge = Bridge(DEBUG_RX, DEBUG_TX, 115200);
+
 void setup() {
+}
+
+void serialEvent() {
+    bridge.processSerial();
 }
 
 void loop() {
