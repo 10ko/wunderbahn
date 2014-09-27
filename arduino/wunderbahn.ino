@@ -78,18 +78,24 @@ Charlieplex U8_charlieplex = Charlieplex(U8_pins, NUMBER_OF_U8_PINS);
 
 // Charlieplexed pin indices.
 CharliePin U2_leds[] = {
+    {0, 1, 2, 3},//
     {1, 0, 2, 3},
-    {0, 1, 2, 3},
+
     {3, 2, 0, 1},
     {2, 3, 0, 1},
-    {2, 1, 0, 3},
+
+    {3, 0, 1, 2},
+
+
     {1, 2, 0, 3},
-    {2, 0, 1, 3},
-    {0, 2, 1, 3},
+
+    {0, 3, 1, 2},
     {3, 1, 0, 2},
     {1, 3, 0, 2},
-    {3, 0, 1, 2},
-    {0, 3, 1, 2}
+    {2, 0, 1, 3},
+    {0, 2, 1, 3},
+
+    {2, 1, 0, 3}
 };
 
 const byte num_U2_leds = sizeof(U2_leds) / sizeof(CharliePin);
@@ -113,7 +119,7 @@ CharliePin U8_leds[] = {
 const byte num_U8_leds = sizeof(U8_leds) / sizeof(CharliePin);
 
 // The Wunderbar bridge device.
-Bridge bridge = Bridge(DEBUG_RX, DEBUG_TX, 115200);
+//Bridge bridge = Bridge(DEBUG_RX, DEBUG_TX, 115200);
 
 // The start and end LEDs for each line. 255 means don't highlight that line.
 byte U2_ping = 255;
@@ -122,22 +128,31 @@ byte U8_ping = 255;
 byte U8_pong = 255;
 
 void setup() {
+    Serial.begin(115200);
 }
-
+/*
 void serialEvent() {
     bridge.processSerial();
 }
-
+*/
 void loop() {
     U2_charlieplex.clear();
     U8_charlieplex.clear();
-
+/*
     if (bridge.newData) {
         bridge_payload_t payload = bridge.getData();
         U2_ping = payload.payload[0];
         U2_pong = payload.payload[1];
         U8_ping = payload.payload[2];
         U8_pong = payload.payload[3];
+    }
+*/
+
+    if (Serial.available() >= 4) {
+        U2_ping = Serial.read();
+        U2_pong = Serial.read();
+        U8_ping = Serial.read();
+        U8_pong = Serial.read();
     }
 
     if (U2_ping != 255 && U2_pong != 255) {

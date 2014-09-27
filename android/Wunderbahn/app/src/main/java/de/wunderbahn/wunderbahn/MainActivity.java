@@ -2,6 +2,7 @@ package de.wunderbahn.wunderbahn;
 
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
@@ -17,6 +18,7 @@ import java.util.UUID;
 import io.relayr.LoginEventListener;
 import io.relayr.RelayrSdk;
 import io.relayr.model.DeviceModel;
+import io.relayr.model.LightColorProx;
 import io.relayr.model.Reading;
 import io.relayr.model.Transmitter;
 import io.relayr.model.TransmitterDevice;
@@ -36,6 +38,9 @@ public class MainActivity extends ActionBarActivity implements LoginEventListene
     private Subscription mWebSocketSubscription;
     private Subscription mUserInfoSubscription;
     private TransmitterDevice mDevice;
+    private VBBClient mVBBClient = new VBBClient();
+    private String mStartColour = null;
+    private String mEndColour = null;
 
     enum STATE {
         RESET,
@@ -50,12 +55,12 @@ public class MainActivity extends ActionBarActivity implements LoginEventListene
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        PebbleKit.startAppOnPebble(getApplicationContext(), PEBBLE_APP_UUID);
+
         if (!RelayrSdk.isUserLoggedIn()) {
             //if the user isn't logged in, we call the logIn method
             RelayrSdk.logIn(this, this);
         }
-
-        PebbleKit.startAppOnPebble(getApplicationContext(), PEBBLE_APP_UUID);
     }
 
     @Override
@@ -67,8 +72,6 @@ public class MainActivity extends ActionBarActivity implements LoginEventListene
         } else {
             updateUiForANonLoggedInUser();
         }
-
-        update_pebble("23:23");
     }
 
     @Override
@@ -123,7 +126,6 @@ public class MainActivity extends ActionBarActivity implements LoginEventListene
             .subscribe(new Subscriber<User>() {
                 @Override
                 public void onCompleted() {
-
                 }
 
                 @Override
@@ -185,7 +187,6 @@ public class MainActivity extends ActionBarActivity implements LoginEventListene
             .subscribe(new Subscriber<List<TransmitterDevice>>() {
                 @Override
                 public void onCompleted() {
-
                 }
 
                 @Override
@@ -209,39 +210,49 @@ public class MainActivity extends ActionBarActivity implements LoginEventListene
 
     private void subscribeToColourUpdates(TransmitterDevice device) {
         mDevice = device;
+
         mWebSocketSubscription = RelayrSdk.getWebSocketClient()
             .subscribe(device, new Subscriber<Object>() {
 
                 @Override
                 public void onCompleted() {
-
+                    Log.d("WIBBLE", "foo");
                 }
 
                 @Override
                 public void onError(Throwable e) {
                     Toast.makeText(MainActivity.this, R.string.something_went_wrong,
                             Toast.LENGTH_SHORT).show();
+                    Log.d("WIBBLE", "bar");
                 }
 
                 @Override
                 public void onNext(Object o) {
+                    Log.d("WIBBLE", "baz");
                     Reading reading = new Gson().fromJson(o.toString(), Reading.class);
-//                    LightColorProx.Color c;
+
+                    Log.d("COLOUR", reading.clr.toString());
 
                     boolean state_changed = false;
+                    String station_colour = nearest_station(reading.clr);
 
-                    if (true /*reading is a valid colour*/) {
+                    if (station_colour != null) {
                         if (state == STATE.RESET) {
                             state = STATE.FIRST;
                             state_changed = true;
+                            mStartColour = station_colour;
                         } else if (state == STATE.FIRST) {
                             state = STATE.SECOND;
                             state_changed = true;
+                            mEndColour = station_colour;
                         } else {
-                            // Do nothing.
+                            mStartColour = null;
+                            mEndColour = null;
                         }
                     } else if (true /*reading is the reset colour*/) {
                         state = STATE.RESET;
+                        mStartColour = null;
+                        mEndColour = null;
                         state_changed = true;
                     }
 
@@ -257,6 +268,7 @@ public class MainActivity extends ActionBarActivity implements LoginEventListene
 
                             case SECOND:
                                 // TODO: Perform the route query.
+                                VBBClient.getStationListFromColor(mStartColour, mEndColour);
                                 update_pebble("17:45");
                                 // TODO: Start strobing.
                                 break;
@@ -270,5 +282,30 @@ public class MainActivity extends ActionBarActivity implements LoginEventListene
         PebbleDictionary data = new PebbleDictionary();
         data.addString(0, s);
         PebbleKit.sendDataToPebble(getApplicationContext(), PEBBLE_APP_UUID, data);
+    }
+
+    private String nearest_station(LightColorProx.Color clr) {
+        int nearest_dist = 999999;
+        String nearest_station_colour = null;
+        int max_dist_sq = 10 * 10;
+
+        for(StationList s : StationList.values()) {
+            LightColorProx.Color sc = string_to_colour(s.getColor());
+            int diffr = sc.r - clr.r;
+            int diffg = sc.g - clr.g;
+            int diffb = sc.b - clr.b;
+            int dist_sq = (diffr * diffr) + (diffg * diffg) + (diffb * diffb);
+
+            if (dist_sq <= max_dist_sq && dist_sq < nearest_dist) {
+                nearest_dist = dist_sq;
+                nearest_station_colour = s.getColor();
+            }
+        }
+
+        return nearest_station_colour;
+    }
+
+    private LightColorProx.Color string_to_colour(String c) {
+        return new LightColorProx.Color();
     }
 }
