@@ -22,6 +22,10 @@ import org.joda.time.DateTime;
  * 26/27 October 2014
  * Berlin
  */
+/**
+ * @author tenko
+ *
+ */
 public class VBBClient {
 	
 	// The VBB endpoint
@@ -33,6 +37,9 @@ public class VBBClient {
 	
 	
 	
+	/**
+	 * The constructor. Contains the call for populating the lists
+	 */
 	public VBBClient(){
 		super();
 		populateStations();
@@ -103,6 +110,13 @@ public class VBBClient {
 	}
 		
 	
+	/**
+	 * Method to retrieve the route between two stations. It returns the list of the stations that form the journey
+	 * 
+	 * @param departure The departure station
+	 * @param arrival The arrival station
+	 * @return the list of the stations that forms the journey
+	 */
 	private static List<Station> getStationListFromStations(Station departure, Station arrival) {
 		
 		List<Station> elementList1 = null;
@@ -200,12 +214,6 @@ public class VBBClient {
 		
 		populateStations();
 		
-		Station moritz = new Station(StationList.STATION_19.getName(), StationList.STATION_19.getId(), StationList.STATION_19.getLedId(), StationList.STATION_19.getLine(), StationList.STATION_19.getColor());
-		Station rosent = new Station(StationList.STATION_03.getName(), StationList.STATION_03.getId(), StationList.STATION_03.getLedId(), StationList.STATION_03.getLine(), StationList.STATION_03.getColor());
-		System.out.println(moritz);
-		System.out.println(rosent);
-		for(Station s : getStationListFromStations(moritz, rosent))
-			System.out.println(s);
 	}
 
 
