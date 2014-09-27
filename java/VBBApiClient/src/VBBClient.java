@@ -1,3 +1,4 @@
+import java.io.StringReader;
 import java.io.StringWriter;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
@@ -5,6 +6,9 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Collections;
 import java.util.List;
+
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
 
 import org.apache.commons.io.IOUtils;
 import org.apache.http.HttpEntity;
@@ -14,6 +18,12 @@ import org.apache.http.entity.StringEntity;
 import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClients;
 import org.joda.time.DateTime;
+import org.jsoup.Jsoup;
+import org.w3c.dom.Document;
+import org.w3c.dom.Element;
+import org.w3c.dom.Node;
+import org.w3c.dom.NodeList;
+import org.xml.sax.InputSource;
 
 
 /**
@@ -210,9 +220,62 @@ public class VBBClient {
 		return returnList;
 	}
 
-	public static void main(String[] args) {
+	/**
+	 * Method returning an array containing departure and arrival time for a journey.
+	 * [0] = departure time
+	 * [1] = arrival time
+	 * 
+	 * @param departureId The id of the departure station
+	 * @param arrivalId The id of the arrival station
+	 * @return the array containing the departure and arrival times
+	 * @throws Exception
+	 */
+	public static String[] getDateFromIds(String departureId, String arrivalId) throws Exception{
 		
-		populateStations();
+		String response = getResponse(departureId, arrivalId);
+		DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();  
+	    DocumentBuilder builder;
+	    String departure, arrival;
+	    try  
+	    {  
+	        builder = factory.newDocumentBuilder();  
+	        
+	        
+	        Document document = builder.parse( new InputSource( new StringReader( response ) ) );
+	        //document.getDocumentElement().normalize();
+	        NodeList connectionList = document.getElementsByTagName("ConnectionList");
+	        Element node = (Element) connectionList.item(0);
+	        NodeList connections = node.getElementsByTagName("Connection");
+	        Element overview = (Element) connections.item(0);
+	        NodeList departureElem = overview.getElementsByTagName("Departure");
+	        Element basicStop = (Element) departureElem.item(0);
+	        NodeList dep = basicStop.getElementsByTagName("Dep");
+	        Element depElem = (Element) dep.item(0);
+	        NodeList times = depElem.getElementsByTagName("Time");
+	        Element time = (Element) times.item(0);
+	        
+	        departure = time.getTextContent().substring(3);
+	        
+	        departureElem = overview.getElementsByTagName("Arrival");
+	        basicStop = (Element) departureElem.item(0);
+	        dep = basicStop.getElementsByTagName("Arr");
+	        depElem = (Element) dep.item(0);
+	        times = depElem.getElementsByTagName("Time");
+	        time = (Element) times.item(0);
+	        
+	        arrival = time.getTextContent().substring(3);
+	        
+	        return new String[] {departure, arrival};
+	        
+	        
+	    } catch (Exception e) {  
+	        e.printStackTrace();  
+	    } 
+	    
+	    
+	    
+		
+		return null;
 		
 	}
 
