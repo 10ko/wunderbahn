@@ -1,0 +1,35 @@
+<!-- saved from url=(0022)http://internet.e-mail -->
+<HTML>
+<HEAD>
+VBB XML Test
+</HEAD>
+<BODY>
+    <p></p>
+
+<FORM ACTION="http://demo.hafas.de/bin/pub/vbb-fahrinfo/relaunch2011/extxml.exe/" METHOD="POST" enctype="text/plain">
+<H2>ConnectionRequest:</H2>
+<textarea name="xml" cols="80" rows="10">
+<?xml version="1.0" encoding="utf-8"?>
+<ReqC lang="DE" prod="testsystem" ver="1.1" accessId="b9a33160d30af93d540fd6732200ddf0">
+    <ConReq>
+        <Start>
+            <Station externalId="9470098" />
+            <Prod prod="1111000000000000" direct="0" />
+        </Start>
+        <Dest>
+            <Station externalId="9470101" />
+        </Dest>
+        <ReqT a="0" date="20120724" time="11:57" />
+        <RFlags b="0" f="6" sMode="N" />
+    </ConReq>
+</ReqC>
+</textarea>
+<BR>
+<INPUT TYPE="SUBMIT" NAME="start" VALUE="Senden">
+</FORM>
+
+
+
+</BODY>
+</HTML>
+

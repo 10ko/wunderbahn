@@ -116,8 +116,8 @@ const byte num_U8_leds = sizeof(U8_leds) / sizeof(CharliePin);
 Bridge bridge = Bridge(DEBUG_RX, DEBUG_TX, 115200);
 
 // The start and end LEDs for each line. 255 means don't highlight that line.
-byte U2_ping = 0;
-byte U2_pong = 12;
+byte U2_ping = 255;
+byte U2_pong = 255;
 byte U8_ping = 255;
 byte U8_pong = 255;
 

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReqC lang="DE" prod="testsystem" ver="1.1" accessId="a4b9a75d0f3bf233012f8926cf47626d">
+    <ConReq>
+        <Start>
+            <Station externalId="9100003" />
+            <Prod prod="1111000000000000" direct="0" />
+        </Start>
+        <Dest>
+            <Station externalId="9003201" />
+        </Dest>
+        <ReqT a="0" date="20130212" time="11:57" />
+        <RFlags b="0" f="6" sMode="N" />
+        <HandicapProfile data="2"/>
+    </ConReq>
+</ReqC>

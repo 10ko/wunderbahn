@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="windows-1252"?>
+<ResC xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://demo.hafas.de/xml/vbb/std/hafasXMLInterface.xsd" ver="1.1" prod="5.31.VBB.4.8.9 [Oct 17 2012]" lang="DE"><ConRes dir="O"><Err code="K9220" text="Nearby to the given address stations could not be found." level="E"/></ConRes></ResC>

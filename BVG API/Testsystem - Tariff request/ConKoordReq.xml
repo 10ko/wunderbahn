@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<ReqC accessId="Nokia" lang="DE" prod="testsystem" ver="1.1">
+        <ConReq>
+           <Start>
+                  <Coord x="13384639" y="52552336"/>
+                  <Prod bike="0" couchette="0" direct="0" sleeper="0"/>
+           </Start>
+           <Dest>
+                  <Coord x="13435816" y="52523375"/>
+           </Dest>
+           <ReqT a="0" date="20120329" time="17:02"/>
+           <RFlags b="0" chExtension="0" f="3"/>
+        </ConReq>
+</ReqC>

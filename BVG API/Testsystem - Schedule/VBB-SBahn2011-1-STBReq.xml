@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<ReqC lang="DE" prod="testsystem" ver="1.1" accessId="VBB-S-Bahn2011">
+  <STBReq boardType="DEP">
+    <Time>16:15</Time>
+    <Period>
+      <DateBegin>20110426</DateBegin>
+      <DateEnd>20110426</DateEnd>
+    </Period>
+    <TableStation externalId="9007104"/>
+  </STBReq>
+</ReqC>
