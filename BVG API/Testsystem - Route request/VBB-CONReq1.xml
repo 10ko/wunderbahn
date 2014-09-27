@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<ReqC accessId="VBB-TELIP2011" ver="1.1" prod="testsystem" lang="DE">
+<ConReq>
+  <RFlags b="0" f="1" ></RFlags>
+  <Start>
+    <Station externalId="009023201"/>
+    <Prod  bike="0" sleeper="0" couchette="0"/>
+  </Start>
+  <Dest>
+    <Station externalId="009100003"/>
+  </Dest>
+  <ReqT date="20120326" time="14:26"></ReqT>
+  <RFlags b="0" chExtension="0" f="3" sMode="N" />
+</ConReq>
+</ReqC>

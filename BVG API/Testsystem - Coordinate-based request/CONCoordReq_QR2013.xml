@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<ReqC accessId="7339019f1e3316d9f6b906e7e859d943" ver="1.1" requestId="7" prod="SPA" lang="DE">
+<ConReq>
+<ReqT date="20130226" time="11:01"></ReqT>
+<RFlags b="0" f="1" ></RFlags>
+<Start>
+  <Coord name="EUREF" x="13355999" y="52481785" type="WGS84"/>
+  <Prod  prod="1111000000000000" direct="0" sleeper="0" couchette="0" bike="0"/>
+</Start>
+<Dest>
+  <Coord name="HBF" x="13369262" y="52524530" type="WGS84"/>
+</Dest>
+</ConReq>
+</ReqC>

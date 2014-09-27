@@ -1,0 +1,23 @@
+{
+  "uuid": "d9d5c83e-b1d5-4569-b659-db416908db77",
+  "shortName": "Wunderbahn",
+  "longName": "Wunderbahn",
+  "companyName": "Wunderbahn",
+  "versionCode": 1,
+  "versionLabel": "1.0",
+  "watchapp": {
+    "watchface": false
+  },
+  "appKeys": {
+    "dummy": 0
+  },
+  "resources": {
+    "media": [{
+        "characterRegex": "[:0-9]",
+        "type": "font",
+        "name": "FONT_ROBOTO_BOLD_CONDENSED_SUBSET_60",
+        "file": "fonts/Roboto-BoldCondensed.ttf"
+      }
+    ]
+  }
+}
